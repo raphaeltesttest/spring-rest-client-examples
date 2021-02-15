@@ -1,47 +1,46 @@
+
 package guru.springframework.api.domain;
 
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class User implements Serializable {
+public class User implements Serializable
+{
 
-    private String gender;
-    private Name name;
-    private Location location;
+    private Integer id;
+    private String name;
+    private String username;
     private String email;
-    private Login login;
+    private Address address;
     private String phone;
-    private Job job;
-    private Billing billing;
-    private String language;
-    private String currency;
+    private String website;
+    private Company company;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = -5154164239330697744L;
 
-    private final static long serialVersionUID = 270727596527329664L;
-
-    public String getGender() {
-        return gender;
+    public Integer getId() {
+        return id;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public Name getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Name name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Location getLocation() {
-        return location;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -52,12 +51,12 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public Login getLogin() {
-        return login;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setLogin(Login login) {
-        this.login = login;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public String getPhone() {
@@ -68,36 +67,20 @@ public class User implements Serializable {
         this.phone = phone;
     }
 
-    public Job getJob() {
-        return job;
+    public String getWebsite() {
+        return website;
     }
 
-    public void setJob(Job job) {
-        this.job = job;
+    public void setWebsite(String website) {
+        this.website = website;
     }
 
-    public Billing getBilling() {
-        return billing;
+    public Company getCompany() {
+        return company;
     }
 
-    public void setBilling(Billing billing) {
-        this.billing = billing;
-    }
-
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public Map<String, Object> getAdditionalProperties() {
@@ -107,4 +90,5 @@ public class User implements Serializable {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
+
 }
